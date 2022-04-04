@@ -27,7 +27,7 @@ document.querySelector('#multiply').addEventListener('click', addFunction);
 document.querySelector('#devide').addEventListener('click', addFunction);
 document.querySelector('#comma').addEventListener('click', addNumber);
 document.querySelector('#percent').addEventListener('click', percentFun);
-document.querySelector('#ac').addEventListener('click', reset);
+document.querySelector('#ac').addEventListener('click', resetAll);
 document.querySelector('#minus').addEventListener('click', minus);
 
 //RESULT
@@ -285,6 +285,13 @@ function pressNumber(n) {
   }
   //Resets all values
   function reset() {
+    input = resultStorage;
+    quickSpace = 0;
+    operator = "";
+    resultStorage = 0;
+    document.querySelector("#output").innerText = "0";
+  }
+  function resetAll() {
     input = "";
     quickSpace = 0;
     operator = "";
